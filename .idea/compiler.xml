@@ -6,11 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="task-flow-cli" />
+        <module name="task-flow-cli-runtime" />
+        <module name="task-flow-cli-grpc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="task-flow-cli" target="1.11" />
+      <module name="task-flow-cli-grpc" target="1.11" />
+      <module name="task-flow-cli-runtime" target="1.11" />
     </bytecodeTargetLevel>
   </component>
 </project>

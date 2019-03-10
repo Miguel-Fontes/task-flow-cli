@@ -1,9 +1,9 @@
-package br.com.miguelfontes.taskflow.cli.commands;
+package br.com.miguelfontes.taskflowcli.runtime.commands;
 
-import br.com.miguelfontes.taskflow.cli.Command;
 import br.com.miguelfontes.taskflow.ports.tasks.CreateUser;
 import br.com.miguelfontes.taskflow.ports.tasks.CreateUserRequest;
 import br.com.miguelfontes.taskflow.ports.tasks.CreateUserResponse;
+import br.com.miguelfontes.taskflowcli.runtime.Command;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.Parameters;
 

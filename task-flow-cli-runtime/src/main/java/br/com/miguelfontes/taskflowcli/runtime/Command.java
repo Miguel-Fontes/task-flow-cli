@@ -1,4 +1,4 @@
-package br.com.miguelfontes.taskflow.cli;
+package br.com.miguelfontes.taskflowcli.runtime;
 
 /**
  * A marker interface to compute generic commands
