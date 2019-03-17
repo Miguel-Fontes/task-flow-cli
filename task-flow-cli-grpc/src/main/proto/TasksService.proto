@@ -7,6 +7,18 @@ message CreateTaskRequest {
 }
 
 message CreateTaskResponse {
+    Task task = 1;
+}
+
+message SearchTasksRequest {
+    string title = 1;
+}
+
+message SearchTasksResponse {
+    repeated Task tasks = 1;
+}
+
+message Task {
     string id = 1;
     string title = 2;
     string createdAt = 3;
@@ -17,4 +29,5 @@ message CreateTaskResponse {
 
 service TasksService {
     rpc create (CreateTaskRequest) returns (CreateTaskResponse);
+    rpc search (SearchTasksRequest) returns (SearchTasksResponse);
 }
