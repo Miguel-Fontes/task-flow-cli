@@ -124,7 +124,7 @@
         </dependency>
         <dependency>
             <groupId>br.com.miguelfontes</groupId>
-            <artifactId>task-flow-ports</artifactId>
+            <artifactId>task-flow-ports-tasks</artifactId>
             <version>${taskflow.version}</version>
         </dependency>
     </dependencies>
