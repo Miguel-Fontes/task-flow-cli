@@ -60,6 +60,7 @@ public class SearchTasksGrpc implements SearchTasks {
         return TaskDTO.of(
                 UUID.fromString(response.getId()),
                 response.getTitle(),
+                response.getDescription(),
                 LocalDateTime.now(),
                 LocalDateTime.now(),
                 response.getStatus(),

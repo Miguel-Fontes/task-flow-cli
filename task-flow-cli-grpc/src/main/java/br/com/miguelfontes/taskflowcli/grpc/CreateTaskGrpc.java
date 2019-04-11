@@ -1,5 +1,9 @@
 package br.com.miguelfontes.taskflowcli.grpc;
 
+import java.time.LocalDateTime;
+import java.util.UUID;
+import java.util.concurrent.TimeUnit;
+
 import br.com.miguelfontes.taskflow.ports.tasks.CreateTask;
 import br.com.miguelfontes.taskflow.ports.tasks.CreateTaskRequest;
 import br.com.miguelfontes.taskflow.ports.tasks.CreateTaskResponse;
@@ -8,10 +12,6 @@ import br.com.miguelfontes.taskflow.tasks.grpc.TasksServiceGrpc;
 import br.com.miguelfontes.taskflow.tasks.grpc.TasksServiceOuterClass;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-
-import java.time.LocalDateTime;
-import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 
 import static br.com.miguelfontes.taskflow.tasks.grpc.TasksServiceGrpc.newBlockingStub;
 
@@ -53,6 +53,7 @@ public class CreateTaskGrpc implements CreateTask {
         return CreateTaskResponse.of(TaskDTO.of(
                 UUID.fromString(response.getId()),
                 response.getTitle(),
+                response.getDescription(),
                 LocalDateTime.now(),
                 LocalDateTime.now(),
                 response.getStatus(),

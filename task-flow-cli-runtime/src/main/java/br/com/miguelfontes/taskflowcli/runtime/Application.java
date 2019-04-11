@@ -19,6 +19,7 @@ import static java.util.Arrays.asList;
  * @author Miguel  Fontes
  */
 public final class Application {
+
     public static void main(String[] args) {
         Dispatcher.newInstance(getCommands(), args).dispatch();
     }
@@ -27,7 +28,6 @@ public final class Application {
         final CreateTask createTask = new CreateTaskGrpc("localhost", 8080);
         final CreateUser createUser = null;
         final SearchTasks searchTasks = new SearchTasksGrpc("localhost", 8080);
-
 
         return asList(AddTaskCommand.instance(createTask),
                 AddUserCommand.instance(createUser),
